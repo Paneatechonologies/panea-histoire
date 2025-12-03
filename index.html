@@ -6,6 +6,183 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="photo_panea.jpg" type="image/x-icon">
   <title>Panea - Mon Parcours</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      min-height: 100vh !important;
+    }
+
+    .container {
+      background: #fff !important;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+      border-radius: 16px !important;
+      max-width: 850px !important;
+      margin: 40px auto !important;
+      padding: 40px !important;
+    }
+
+    .profile {
+      position: relative;
+      margin: -100px auto 40px !important;
+      width: fit-content;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px !important;
+    }
+
+    .profile-img {
+      width: 180px !important;
+      height: 180px !important;
+      border-radius: 50% !important;
+      object-fit: cover !important;
+      border: 6px solid #fff !important;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5) !important;
+      cursor: pointer !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1) !important;
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.7) !important;
+    }
+
+    .profile-info {
+      background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%) !important;
+      padding: 30px !important;
+      border-radius: 12px !important;
+      border-left: 5px solid #667eea !important;
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1) !important;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .profile-info h1 {
+      margin: 0 !important;
+      font-size: 2.2em !important;
+      color: #2c3e50 !important;
+    }
+
+    .profile-info p {
+      margin: 8px 0 20px !important;
+      font-weight: 600 !important;
+      color: #667eea !important;
+      font-size: 1.2em !important;
+    }
+
+    .btn-cv {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      color: #fff !important;
+      padding: 12px 28px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+      transition: all 0.3s ease !important;
+      display: inline-block !important;
+    }
+
+    .btn-cv:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+    }
+
+    h2 {
+      color: #2c3e50 !important;
+      font-size: 1.5em !important;
+      margin-top: 30px !important;
+      margin-bottom: 15px !important;
+      border-bottom: 3px solid #667eea !important;
+      padding-bottom: 10px !important;
+      transition: 0.3s !important;
+    }
+
+    h2:hover {
+      color: #667eea !important;
+      transform: translateX(5px) !important;
+    }
+
+    p {
+      line-height: 1.8 !important;
+      font-size: 1.05em !important;
+      color: #555 !important;
+      margin-bottom: 15px !important;
+    }
+
+    strong {
+      color: #667eea !important;
+      font-weight: 600 !important;
+    }
+
+    footer {
+      text-align: center !important;
+      margin-top: 50px !important;
+      font-size: 0.95em !important;
+      color: #999 !important;
+      padding-top: 25px !important;
+      border-top: 2px solid #eee !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 25px !important;
+        margin: 20px !important;
+      }
+
+      .profile {
+        margin: -80px auto 30px !important;
+      }
+
+      .profile-img {
+        width: 140px !important;
+        height: 140px !important;
+        border-width: 5px !important;
+      }
+
+      .profile-info h1 {
+        font-size: 1.8em !important;
+      }
+
+      h2 {
+        font-size: 1.3em !important;
+      }
+
+      p {
+        font-size: 1em !important;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 15px !important;
+      }
+
+      .profile {
+        margin: -70px auto 20px !important;
+      }
+
+      .profile-img {
+        width: 120px !important;
+        height: 120px !important;
+        border-width: 4px !important;
+      }
+
+      .profile-info h1 {
+        font-size: 1.5em !important;
+      }
+
+      h2 {
+        font-size: 1.2em !important;
+      }
+
+      p {
+        font-size: 0.95em !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
