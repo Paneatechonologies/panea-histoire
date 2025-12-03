@@ -10,12 +10,18 @@
 <body>
   <div class="container">
     <div class="profile">
-      <img src="photo_panea.jpg" alt="Photo de Panea" />
+      <img src="photo_panea.jpg" alt="Photo de Panea" class="profile-img" id="profileImg" style="cursor: pointer;" />
       <div class="profile-info">
         <h1>Panea Obed</h1>
-        <p>Architecte de solutions numériques</p>
+        <p>Développeur Mobile</p>
         <a href="cv_panea.html" class="btn-cv">Voir mon CV complet</a>
       </div>
+    </div>
+
+    <!-- Modal pour agrandir la photo -->
+    <div id="photoModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
     </div>
 
     <p>
@@ -23,7 +29,7 @@
     </p>
 
     <p>
-      Diplômé en <strong>Commerciale et Gestion</strong>, il commence seul à se former en informatique. Il apprend rapidement le développement avec <strong>PHP</strong>, <strong>jQuery</strong>, puis découvre <strong>Flutter</strong>, <strong>Python</strong>, <strong>UML</strong> et bien d'autres outils. Son esprit d'initiative le pousse à créer ses premiers projets pour répondre aux besoins réels de sa communauté.
+      Diplômé en <strong>Commerciale et Gestion</strong> (2020), <strong>Graduat en Informatique de Gestion</strong> (2023), puis <strong>Licencié en Sciences Informatiques</strong> (2025), il commence seul à se former en informatique. Il apprend rapidement le développement avec <strong>PHP</strong>, <strong>jQuery</strong>, puis découvre <strong>Flutter</strong>, <strong>Python</strong>, <strong>UML</strong> et bien d'autres outils. Son esprit d'initiative le pousse à créer ses premiers projets pour répondre aux besoins réels de sa communauté.
     </p>
 
     <h2>MarketPlus : le e-commerce local réinventé</h2>
@@ -68,12 +74,35 @@
     </p>
 
     <p>
-      Aujourd’hui, il occupe le poste de <strong>développeur web et mobile</strong> chez <strong>Illumination Metaverse</strong>, une entreprise visionnaire où il met ses compétences au service de projets immersifs alliant technologie, créativité et métavers.
+      Aujourd'hui, il occupe le poste de <strong>développeur mobile</strong> chez <strong>Kansa Consulting</strong> depuis septembre 2025, où il conçoit et développe des solutions mobiles innovantes. Précédemment, il a travaillé comme <strong>développeur web et mobile</strong> chez <strong>Illumination Metaverse</strong>, une entreprise visionnaire où il mettait ses compétences au service de projets immersifs alliant technologie, créativité et métavers.
     </p>
 
     <footer>
-      &copy; 2025 - L’histoire de Panea. Tous droits réservés.
+      &copy; 2025 - L'histoire de Panea. Tous droits réservés.
     </footer>
   </div>
+
+  <script>
+    // Galerie photo cliquable
+    const profileImg = document.getElementById('profileImg');
+    const photoModal = document.getElementById('photoModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+
+    profileImg.addEventListener('click', function() {
+      photoModal.style.display = 'block';
+      modalImg.src = this.src;
+    });
+
+    closeBtn.addEventListener('click', function() {
+      photoModal.style.display = 'none';
+    });
+
+    photoModal.addEventListener('click', function(event) {
+      if (event.target === photoModal) {
+        photoModal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
